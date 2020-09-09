@@ -1,0 +1,90 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    color: white;
+    background-color: black;
+    font: 12px 'Oswald', 'Arial', sans-serif;
+}
+
+.top {
+    padding: 10px;
+    border-bottom: solid 1px #666666;
+}
+
+.nav_ul {
+    display: table;
+}
+
+.nav_ul li {
+    display: table-cell;
+    font-size: 12px;
+    text-align: center;
+    width: 11%;
+    cursor: pointer;
+    list-style: none;
+}
+
+.nav_ul li a {
+    display: block;
+    padding: 30px 0.25em;
+}
+
+.nav_ul li::after {
+    content: "";
+    border-bottom: 2px solid #f4ce1b;
+    opacity: 0;
+    width: 100%;
+    display: block;
+}
+
+.nav_ul li:hover::after {
+    opacity: 1;
+}
+
+.nav_contents {
+    width: 100%;
+    height: 100px;
+    background-color: #0f0;
+    opacity: 0.1;
+}
+
+.content {
+    position: relative;
+}
+
+.dots {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+
+.dots ul {
+    display: table;
+}
+
+.dots ul li {
+    display: table-cell;
+    padding: 3px 7px;
+}
+.dots ul li button{
+    display: none;
+}
+.dots ul li::before {
+    content: '◇';
+    line-height: 1;
+    font-size: 14px;
+}
+
+.dots ul li.slick-active::before {
+    content: '◆';
+    color: #f4ce1b;
+}
