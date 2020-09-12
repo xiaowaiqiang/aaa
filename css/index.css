@@ -2,6 +2,7 @@
     margin: 0 auto;
     padding: 0;
     max-width: 100%;
+    box-sizing: border-box;
 }
 
 a {
@@ -75,9 +76,11 @@ body {
     display: table-cell;
     padding: 3px 7px;
 }
-.dots ul li button{
+
+.dots ul li button {
     display: none;
 }
+
 .dots ul li::before {
     content: '◇';
     line-height: 1;
@@ -87,4 +90,57 @@ body {
 .dots ul li.slick-active::before {
     content: '◆';
     color: #f4ce1b;
+}
+
+.first {
+    position: relative;
+}
+
+.second {
+    padding: 40px 0px;
+    display: block;
+    width: 100%;
+    height: 455px;
+}
+
+.left {
+    background-color: #1a1a1a;
+    width: 25%;
+    float: left;
+    text-align: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.left h1{
+    font-size: 20px;
+    margin-top: 100px;
+}
+
+.middle {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+
+.right {
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+.second img{
+    display: block;
+    height: 100%;
+}
+.right div{
+    height: 50%;
+}
+.button-style-1{
+    min-width: 12em;
+    padding: 1em;
+    color: #f4ce1b;
+    border: 1px solid #aaa;
+    background-color: black;
+    display: inline-block;
+    margin: 30px;
 }
