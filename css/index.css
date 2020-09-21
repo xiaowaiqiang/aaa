@@ -23,6 +23,19 @@ body {
 .top {
     padding: 10px;
     border-bottom: solid 1px #666666;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top *{
+    margin: 0;
+}
+.top nav a{
+    padding: 0.25em 0.75em;
+}
+
+.top nav a.active{
+    color: #f4ce1b;
 }
 
 .nav_ul {

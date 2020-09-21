@@ -1,4 +1,5 @@
 $(function () {
+    loadLanguage("en");
     $(".hasChild").hover(function () {
         $(".hasChild").removeClass("active");
         $(".nav_contents").addClass("active");
@@ -27,14 +28,25 @@ $(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
     });
+    $(".top nav a[data-lang]").click(function () {
+        $(".top nav a[data-lang]").removeClass("active");
+        $(this).addClass("active");
+        let type = $(this).attr("data-lang");
+        loadLanguage(type);
+    });
+});
+
+function loadLanguage(type) {
     $.i18n.properties({//加载资浏览器语言对应的资源文件
-        name: 'zh', //资源文件名称
+        name: type, //资源文件名称
         path: 'language/', //资源文件路径
-        language: 'zh',
+        language: type,
         cache: false,
         mode: 'map', //用Map的方式使用资源文件中的值
         callback: function () {//加载成功后设置显示内容
-
+            for (let i in $.i18n.map) {
+                $('[data-lang="' + i + '"]').text($.i18n.map[i]);
+            }
         }
     });
-});
+}
