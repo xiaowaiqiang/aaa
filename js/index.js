@@ -1,5 +1,6 @@
 $(function () {
     $(".hasChild").hover(function () {
+        $(".hasChild").removeClass("active");
         $(".nav_contents").addClass("active");
         let index = $(".nav_ul li").index(this);
         $(".nav_contents .nav_item").eq(index).addClass("active");
@@ -7,6 +8,14 @@ $(function () {
         $(".nav_contents").removeClass("active");
         let index = $(".nav_ul li").index(this);
         $(".nav_contents .nav_item").eq(index).removeClass("active");
+    });
+    $(".hasChild").click(function () {
+        $(".hasChild").removeClass("active");
+        $(this).addClass("active");
+        $(".nav_contents").addClass("active");
+        let index = $(".nav_ul li").index(this);
+        $(".nav_contents .nav_item").removeClass("active")
+        $(".nav_contents .nav_item").eq(index).addClass("active");
     });
     $('.slick_img').slick({
         dots: true,
