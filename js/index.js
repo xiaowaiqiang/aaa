@@ -1,5 +1,7 @@
 $(function () {
+    //初始化英文
     loadLanguage("en");
+    //菜单事件
     $(".hasChild").hover(function () {
         $(".hasChild").removeClass("active");
         $(".nav_contents").addClass("active");
@@ -18,6 +20,18 @@ $(function () {
         $(".nav_contents .nav_item").removeClass("active")
         $(".nav_contents .nav_item").eq(index).addClass("active");
     });
+    $(document).click(function(){
+        $(".hasChild").removeClass("active");
+        $(".nav_contents").removeClass("active");
+        $(".nav_contents .nav_item").removeClass("active");
+    });
+    $(".hasChild").click(function(event){
+        event.stopPropagation();
+    });
+    $(".nav_contents").click(function(event){
+        event.stopPropagation();
+    });
+    //banner轮巡
     $('.slick_img').slick({
         dots: true,
         autoplay:true,
@@ -28,6 +42,7 @@ $(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
     });
+    //切换语言
     $(".top nav a[data-lang]").click(function () {
         $(".top nav a[data-lang]").removeClass("active");
         $(this).addClass("active");

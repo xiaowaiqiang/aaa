@@ -21,7 +21,7 @@ body {
 }
 
 .top {
-    padding: 10px;
+    padding: 5px 10px;
     border-bottom: solid 1px #666666;
     display: flex;
     align-items: center;
@@ -30,6 +30,11 @@ body {
 .top *{
     margin: 0;
 }
+
+.top img{
+    height: 50px;
+}
+
 .top nav a{
     padding: 0.25em 0.75em;
 }
@@ -254,6 +259,48 @@ body {
 
 .third .third_right {
     float: right;
+}
+footer{
+    position: relative;
+    background-color: #1a1a1a;
+    margin-top: 60px;
+}
+footer .pagetop{
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%,0) rotate(45deg) ;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+}
+footer .pagetop a{
+    color: #bbbbbb;
+    transform: rotate(-45deg) ;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+footer ul{
+    text-align: center;
+    position: relative;
+}
+footer ul::before {
+    content: 'FOLLOW US';
+    padding: 20px;
+    color: #a5a5a7;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+}
+footer li{
+    display: inline-block;
+    padding: 10px;
+}
+footer li img{
+    width: 26px;
 }
 
 @media print, screen and (max-width: 737px) {
