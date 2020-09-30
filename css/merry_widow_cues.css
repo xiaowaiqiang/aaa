@@ -1,0 +1,27 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    color: white;
+    background-color: black;
+    font: 12px 'Oswald', 'Arial', sans-serif;
+}
+
+iframe {
+    width: 100%;
+}
+
+#footer {
+    position: absolute;
+}
+
+#zy_content {
+    display: block;
+    margin-top: -330px;
+    position: relative;
+    z-index: -1;
+    text-align: center;
+    padding-bottom: 60px;
+}

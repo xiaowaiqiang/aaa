@@ -2,53 +2,12 @@ $(function () {
     //初始化英文
     loadLanguage("en");
     //菜单事件
-    $(".hasChild").hover(function () {
-        $(".hasChild").removeClass("active");
-        $(".nav_contents").addClass("active");
-        let index = $(".nav_ul li").index(this);
-        $(".nav_contents .nav_item").eq(index).addClass("active");
-    }, function () {
-        $(".nav_contents").removeClass("active");
-        let index = $(".nav_ul li").index(this);
-        $(".nav_contents .nav_item").eq(index).removeClass("active");
-    });
-    $(".hasChild").click(function () {
-        $(".hasChild").removeClass("active");
-        $(this).addClass("active");
-        $(".nav_contents").addClass("active");
-        let index = $(".nav_ul li").index(this);
-        $(".nav_contents .nav_item").removeClass("active")
-        $(".nav_contents .nav_item").eq(index).addClass("active");
-    });
-    $(document).click(function(){
-        $(".hasChild").removeClass("active");
-        $(".nav_contents").removeClass("active");
-        $(".nav_contents .nav_item").removeClass("active");
-    });
-    $(".hasChild").click(function(event){
-        event.stopPropagation();
-    });
-    $(".nav_contents").click(function(event){
-        event.stopPropagation();
-    });
+    initNav();
     //banner轮巡
-    $('.slick_img').slick({
-        dots: true,
-        autoplay:true,
-        autoplaySpeed:1000,
-        accessibility:false,
-        arrows:false,
-        appendDots: $('.dots'),
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    });
+    initBanner();
     //切换语言
-    $(".top nav a[data-lang]").click(function () {
-        $(".top nav a[data-lang]").removeClass("active");
-        $(this).addClass("active");
-        let type = $(this).attr("data-lang");
-        loadLanguage(type);
-    });
+    changeLanguage();
+    // clickNavItem();
 });
 
 function loadLanguage(type) {
@@ -63,5 +22,80 @@ function loadLanguage(type) {
                 $('[data-lang="' + i + '"]').text($.i18n.map[i]);
             }
         }
+    });
+}
+
+function changeLanguage() {
+    $(".top nav a[data-lang]").click(function () {
+        $(".top nav a[data-lang]").removeClass("active");
+        $(this).addClass("active");
+        let type = $(this).attr("data-lang");
+        loadLanguage(type);
+    });
+}
+
+function initNav() {
+    $(".hasChild").hover(function () {
+        $(".hasChild").removeClass("active");
+        $(".nav_contents").addClass("active");
+        let index = $(".nav_ul li").index(this);
+        $(".nav_contents .nav_item").eq(index).addClass("active");
+        //iframe点击不了视频
+        window.parent.document.getElementById("zy_content").style.position = "relative";
+    }, function () {
+        $(".nav_contents").removeClass("active");
+        let index = $(".nav_ul li").index(this);
+        $(".nav_contents .nav_item").eq(index).removeClass("active");
+        //iframe点击不了视频
+        window.parent.document.getElementById("zy_content").style.position = "inherit";
+    });
+    $(".hasChild").click(function () {
+        $(".hasChild").removeClass("active");
+        $(this).addClass("active");
+        $(".nav_contents").addClass("active");
+        let index = $(".nav_ul li").index(this);
+        $(".nav_contents .nav_item").removeClass("active")
+        $(".nav_contents .nav_item").eq(index).addClass("active");
+        //iframe点击不了视频
+        window.parent.document.getElementById("zy_content").style.position = "relative";
+    });
+    $(document).click(function () {
+        $(".hasChild").removeClass("active");
+        $(".nav_contents").removeClass("active");
+        $(".nav_contents .nav_item").removeClass("active");
+        //iframe点击不了视频
+        window.parent.document.getElementById("zy_content").style.position = "inherit";
+    });
+    $(".hasChild").click(function (event) {
+        event.stopPropagation();
+    });
+    $(".nav_contents").click(function (event) {
+        event.stopPropagation();
+    });
+}
+
+function initBanner() {
+    $('.slick_img').slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        accessibility: false,
+        arrows: false,
+        appendDots: $('.dots'),
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+}
+
+function clickNavItem() {
+    $(".ggg").click(function () {
+        let url = "merry_widow_cues.html";
+        $(".content").load("merry_widow_cues.html");
+        history.pushState({urlStr: url}, "aa", url);
+    });
+    window.addEventListener('popstate', function (event) {
+        alert("a:" + history.state.urlStr+"  b:"+window.location.href);
+        window.history.back();
+        window.location.reload();
     });
 }

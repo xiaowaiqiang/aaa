@@ -16,10 +16,12 @@ ul {
 
 body {
     color: white;
-    background-color: black;
+    background-color: transparent;
     font: 12px 'Oswald', 'Arial', sans-serif;
 }
-
+header{
+    background-color: black;
+}
 .top {
     padding: 5px 10px;
     border-bottom: solid 1px #666666;
@@ -151,6 +153,9 @@ body {
 
 .content {
     position: relative;
+    padding-bottom: 60px;
+    background-color: black;
+    text-align: center;
 }
 
 .dots {
@@ -263,7 +268,6 @@ body {
 footer{
     position: relative;
     background-color: #1a1a1a;
-    margin-top: 60px;
     padding-bottom: 20px;
 }
 footer .pagetop{
