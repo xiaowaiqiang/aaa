@@ -50,27 +50,36 @@ function initNav() {
         //iframe点击不了视频
         window.parent.document.getElementById("zy_content").style.position = "inherit";
         window.parent.document.getElementById("zy_content").style.zIndex = 2;
-
+    });
+    $(".nav_item").hover(function () {
+        //iframe点击不了视频
+        window.parent.document.getElementById("zy_content").style.position = "relative";
+        window.parent.document.getElementById("zy_content").style.zIndex = -1;
+    },function () {
+        //iframe点击不了视频
+        window.parent.document.getElementById("zy_content").style.position = "inherit";
+        window.parent.document.getElementById("zy_content").style.zIndex = 2;
     });
     $(".hasChild").click(function () {
+        //iframe点击不了视频
+        window.parent.document.getElementById("zy_content").style.position = "relative";
+        window.parent.document.getElementById("zy_content").style.zIndex = -1;
+        //正常菜单
         $(".hasChild").removeClass("active");
         $(this).addClass("active");
         $(".nav_contents").addClass("active");
         let index = $(".nav_ul li").index(this);
         $(".nav_contents .nav_item").removeClass("active")
         $(".nav_contents .nav_item").eq(index).addClass("active");
-        //iframe点击不了视频
-        window.parent.document.getElementById("zy_content").style.position = "relative";
-        window.parent.document.getElementById("zy_content").style.zIndex = -1;
     });
     $(document).click(function () {
-        $(".hasChild").removeClass("active");
-        $(".nav_contents").removeClass("active");
-        $(".nav_contents .nav_item").removeClass("active");
         //iframe点击不了视频
         window.parent.document.getElementById("zy_content").style.position = "inherit";
         window.parent.document.getElementById("zy_content").style.zIndex = 2;
-
+        //正常菜单
+        $(".hasChild").removeClass("active");
+        $(".nav_contents").removeClass("active");
+        $(".nav_contents .nav_item").removeClass("active");
     });
     $(".hasChild").click(function (event) {
         event.stopPropagation();
