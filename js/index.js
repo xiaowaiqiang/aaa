@@ -42,12 +42,15 @@ function initNav() {
         $(".nav_contents .nav_item").eq(index).addClass("active");
         //iframe点击不了视频
         window.parent.document.getElementById("zy_content").style.position = "relative";
+        window.parent.document.getElementById("zy_content").style.zIndex = -1;
     }, function () {
         $(".nav_contents").removeClass("active");
         let index = $(".nav_ul li").index(this);
         $(".nav_contents .nav_item").eq(index).removeClass("active");
         //iframe点击不了视频
         window.parent.document.getElementById("zy_content").style.position = "inherit";
+        window.parent.document.getElementById("zy_content").style.zIndex = 2;
+
     });
     $(".hasChild").click(function () {
         $(".hasChild").removeClass("active");
@@ -58,6 +61,7 @@ function initNav() {
         $(".nav_contents .nav_item").eq(index).addClass("active");
         //iframe点击不了视频
         window.parent.document.getElementById("zy_content").style.position = "relative";
+        window.parent.document.getElementById("zy_content").style.zIndex = -1;
     });
     $(document).click(function () {
         $(".hasChild").removeClass("active");
@@ -65,6 +69,8 @@ function initNav() {
         $(".nav_contents .nav_item").removeClass("active");
         //iframe点击不了视频
         window.parent.document.getElementById("zy_content").style.position = "inherit";
+        window.parent.document.getElementById("zy_content").style.zIndex = 2;
+
     });
     $(".hasChild").click(function (event) {
         event.stopPropagation();
