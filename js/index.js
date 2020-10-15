@@ -1,6 +1,6 @@
 $(function () {
     //初始化英文
-    loadLanguage("en");
+    loadLanguage(getCookie("langge"));
     //菜单事件
     initNav();
     //banner轮巡
@@ -9,6 +9,20 @@ $(function () {
     changeLanguage();
     // clickNavItem();
 });
+
+function setCookie(name, value) {
+    var Days = 30;
+    var exp = new Date();
+    exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+    document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+}
+
+function getCookie(name) {
+    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+    if (arr = document.cookie.match(reg)) {
+        return unescape(arr[2]);
+    }
+}
 
 function loadLanguage(type) {
     $.i18n.properties({//加载资浏览器语言对应的资源文件
@@ -23,6 +37,8 @@ function loadLanguage(type) {
             }
         }
     });
+    setCookie("langge",type)
+    $('[data-lang="' + type + '"]').addClass("active");
 }
 
 function changeLanguage() {
@@ -55,7 +71,7 @@ function initNav() {
         //iframe点击不了视频
         window.parent.document.getElementById("zy_content").style.position = "relative";
         window.parent.document.getElementById("zy_content").style.zIndex = -1;
-    },function () {
+    }, function () {
         //iframe点击不了视频
         window.parent.document.getElementById("zy_content").style.position = "inherit";
         window.parent.document.getElementById("zy_content").style.zIndex = 2;
@@ -109,7 +125,7 @@ function clickNavItem() {
         history.pushState({urlStr: url}, "aa", url);
     });
     window.addEventListener('popstate', function (event) {
-        alert("a:" + history.state.urlStr+"  b:"+window.location.href);
+        alert("a:" + history.state.urlStr + "  b:" + window.location.href);
         window.history.back();
         window.location.reload();
     });

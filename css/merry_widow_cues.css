@@ -25,3 +25,28 @@ iframe {
     text-align: center;
     padding-bottom: 60px;
 }
+
+.cues_titles{
+    margin: 10px;
+}
+.cues_title{
+    border-bottom: #bbbbbb solid 1px;
+    margin: 0 10px;
+    font-size: 28px;
+}
+
+.cues_title.active{
+    border-bottom: #f4ce1b solid 2px;
+}
+
+.cues_img{
+    width: 100%;
+}
+
+.cues_video{
+    width: 80%;
+}
+
+h1{
+    margin: 10px;
+}
