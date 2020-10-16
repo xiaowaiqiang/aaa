@@ -44,8 +44,7 @@ iframe {
 }
 
 .cues_video{
-    max-width: 80%;
-    min-width: 40%;
+    width: 50%;
 }
 
 h1{
