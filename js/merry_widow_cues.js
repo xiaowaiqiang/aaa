@@ -1,12 +1,12 @@
 $(function () {
     var resource = [
         {
-            img: "img/sh_63.jpg",
+            img: "img/sh_63_ori.jpg",
             video: "video/video2.mp4",
             poster: "img/video2_poster.png"
         },
         {
-            img: "img/sh_01.jpg",
+            img: "img/sh_01_ori.jpg",
             video: "video/video1.mp4",
             poster: "img/video1_poster.png"
         }];
