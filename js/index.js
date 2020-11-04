@@ -2,7 +2,7 @@ $(function () {
     //初始化英文
     loadLanguage(getCookie("langge"));
     //菜单事件
-    initNav();
+    // initNav();
     //banner轮巡
     initBanner();
     //切换语言
