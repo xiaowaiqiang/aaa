@@ -7,7 +7,7 @@ $(function () {
     initBanner();
     //切换语言
     changeLanguage();
-    // clickNavItem();
+    clickNavItem();
 });
 
 function setCookie(name, value) {
@@ -119,7 +119,7 @@ function initBanner() {
 }
 
 function clickNavItem() {
-    $(".ggg").click(function () {
+    $(".html_merry_widow_cues").click(function () {
         let url = "merry_widow_cues.html";
         $(".content").load("merry_widow_cues.html");
         history.pushState({urlStr: url}, "aa", url);
