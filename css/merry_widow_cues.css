@@ -28,7 +28,16 @@ iframe {
 
 .cues_titles{
     margin: 10px;
+    /*height: 33px;*/
+    /*overflow: hidden;*/
 }
+
+.cues_titles_main{
+    /*height: 50px;*/
+    /*overflow: auto;*/
+    /*white-space: nowrap;*/
+}
+
 .cues_title{
     border-bottom: #bbbbbb solid 1px;
     margin: 0 10px;
@@ -41,6 +50,11 @@ iframe {
 
 .cues_img{
     width: 100%;
+}
+
+.item_img{
+    width: 100%;
+    display: none;
 }
 
 .cues_video{
