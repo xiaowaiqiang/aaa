@@ -30,7 +30,40 @@ $(function () {
         {
             img: "img/sh_06_ori.jpg",
             img2: "img/sh_06_2_ori.jpg"
-        }];
+        },
+        {
+            img: "img/sh_07_ori.jpg",
+            img2: "img/sh_07_2_ori.jpg"
+        },
+        {
+            img: "img/sh_08_ori.jpg",
+            img2: "img/sh_08_2_ori.jpg"
+        },
+        {
+            img: "img/sh_09_ori.jpg",
+            img2: "img/sh_09_2_ori.jpg"
+        },
+        {
+            img: "img/sh_10_ori.jpg",
+            img2: "img/sh_10_2_ori.jpg"
+        },
+        {
+            img: "img/sh_11_ori.jpg",
+            img2: "img/sh_11_2_ori.jpg"
+        },
+        {
+            img: "img/sh_12_ori.jpg",
+            img2: "img/sh_12_2_ori.jpg"
+        },
+        {
+            img: "img/sh_13_ori.jpg",
+            img2: "img/sh_13_2_ori.jpg"
+        },
+        {
+            img: "img/sh_14_ori.jpg",
+            img2: "img/sh_14_2_ori.jpg"
+        }
+    ];
     $(".cues_title").click(function () {
         $(".cues_title").removeClass("active");
         let index = $(".cues_titles .cues_title").index(this);
