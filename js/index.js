@@ -7,7 +7,7 @@ $(function () {
     initBanner();
     //切换语言
     changeLanguage();
-    clickNavItem();
+    // clickNavItem();
 });
 
 function setCookie(name, value) {
@@ -118,15 +118,24 @@ function initBanner() {
     });
 }
 
-function clickNavItem() {
+/*function clickNavItem() {
     $(".html_merry_widow_cues").click(function () {
         let url = "merry_widow_cues.html";
-        $(".content").load("merry_widow_cues.html");
-        history.pushState({urlStr: url}, "aa", url);
+        alert("aaa"+url);
+        // $("#zy_content").load("merry_widow_cues.html");
+        // history.pushState({urlStr: url}, "aa", url);
+        parent.window.location.href=url;
     });
-    window.addEventListener('popstate', function (event) {
+    $(".accessories").click(function () {
+        let url = "accessories.html";
+        alert(url);
+        // $("#zy_content").load("accessories.html");
+        // history.pushState({urlStr: url}, "aa", url);
+        parent.window.location.href=url;
+    });
+    /!*window.addEventListener('popstate', function (event) {
         alert("a:" + history.state.urlStr + "  b:" + window.location.href);
         window.history.back();
         window.location.reload();
-    });
-}
+    });*!/
+}*/

@@ -1,0 +1,58 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+}
+
+body {
+    color: white;
+    background-color: black;
+    font: 12px 'Oswald', 'Arial', sans-serif;
+}
+
+iframe {
+    width: 100%;
+}
+
+#footer {
+    position: absolute;
+}
+
+#zy_content {
+    display: block;
+    margin-top: -330px;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.cues_titles{
+    margin: 10px;
+}
+
+
+.cues_title{
+    border-bottom: #bbbbbb solid 1px;
+    margin: 0 13px;
+    font-size: 28px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.cues_title.active{
+    border-bottom: #f4ce1b solid 2px;
+}
+
+.cues_imgs{
+    text-align: justify;
+    list-style: none;
+    text-align: center;
+}
+.cues_imgs li{
+    /*width: 45%;*/
+    display: inline-block;
+}
+.cues_img{
+    width: 100%;
+}
