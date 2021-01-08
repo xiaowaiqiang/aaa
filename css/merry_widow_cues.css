@@ -43,6 +43,7 @@ iframe {
     margin: 0 10px;
     font-size: 28px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .cues_title.active{
