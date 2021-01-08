@@ -49,19 +49,23 @@ iframe {
     border-bottom: #f4ce1b solid 2px;
 }
 
-.cues_img{
-    width: 100%;
-}
-
-.item_img{
-    width: 100%;
-    display: none;
-}
-
 .cues_video{
     width: 50%;
 }
 
 h1{
     margin: 10px;
+}
+
+.cues_imgs{
+    text-align: justify;
+    list-style: none;
+    text-align: center;
+}
+.cues_imgs li{
+    /*width: 45%;*/
+    display: inline-block;
+}
+.cues_img{
+    width: 100%;
 }
