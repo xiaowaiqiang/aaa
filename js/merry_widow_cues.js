@@ -83,6 +83,41 @@ $(function () {
         },
         {
             img: ["img/sh_25_1.jpg","img/sh_25_2.jpg","img/sh_25_3.jpg"],
+        },
+        {
+            img: ["img/sh_26_1.jpg","img/sh_26_2.jpg","img/sh_26_3.jpg"],
+        },
+        {
+            img: ["img/sh_27_1.jpg","img/sh_27_2.jpg","img/sh_27_3.jpg"],
+        },
+        {
+            img: ["img/sh_28_1.jpg","img/sh_28_2.jpg","img/sh_28_3.jpg"],
+        },
+        {
+            img: ["img/sh_29_1.jpg","img/sh_29_2.jpg","img/sh_29_3.jpg"],
+        },
+        {
+            img: ["img/sh_30_1.jpg","img/sh_30_2.jpg","img/sh_30_3.jpg"],
+        },
+        {
+            img: ["img/sh_31_1.jpg","img/sh_31_2.jpg","img/sh_31_3.jpg"],
+        },
+        {
+            img: ["img/sh_32_1.jpg","img/sh_32_2.jpg","img/sh_32_3.jpg","img/sh_32_4.jpg"],
+        },
+        {
+            img: ["img/sh_33_1.jpg","img/sh_33_2.jpg","img/sh_33_3.jpg","img/sh_33_4.jpg"],
+        },
+        {
+            img: ["img/sh_34_1.jpg","img/sh_34_2.jpg","img/sh_34_3.jpg"],
+        },
+        {
+            img: ["img/sh_35_1.jpg","img/sh_35_2.jpg","img/sh_35_3.jpg"],
+        },
+        {
+            img: ["img/sh_36_1.jpg","img/sh_36_2.jpg"],
+            video: "video/video_sh36.mp4",
+            poster: "img/v_sh36_poster_ori.jpg"
         }
     ];
     $(".cues_title").click(function () {
