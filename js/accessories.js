@@ -21,9 +21,7 @@ $(function () {
         {
             imgs: ["img/towel_1.jpg","img/towel_2.jpg","img/towel_3.jpg","img/towel_4.jpg"],
         },
-        {
-            imgs: ["img/sh_b03_1.jpg","img/sh_b03_3.jpg","img/sh_b03_5.jpg","img/sh_b03_4.jpg","img/sh_b03_2.jpg"],
-        },
+
     ];
 
     $(".cues_title").click(function () {
