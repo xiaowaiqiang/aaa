@@ -174,6 +174,24 @@ $(function () {
             img: ["img/sh_57_1.jpg","img/sh_57_2.jpg","img/sh_57_3.jpg"],
         },
         {
+            img: ["img/sh_75_1.jpg","img/sh_75_2.jpg","img/sh_75_3.jpg"],
+        },
+        {
+            img: ["img/sh_76_1.jpg","img/sh_76_2.jpg","img/sh_76_3.jpg"],
+        },
+        {
+            img: ["img/sh_77_1.jpg","img/sh_77_2.jpg","img/sh_77_3.jpg"],
+        },
+        {
+            img: ["img/sh_78_1.jpg","img/sh_78_2.jpg","img/sh_78_3.jpg"],
+        },
+        {
+            img: ["img/sh_79_1.jpg","img/sh_79_2.jpg","img/sh_79_3.jpg"],
+        },
+        {
+            img: ["img/sh_80_1.jpg","img/sh_80_2.jpg","img/sh_80_3.jpg"],
+        },
+        {
             img: ["img/sh_b01_1.jpg","img/sh_b01_2.jpg","img/sh_b01_3.jpg"],
         },
         {
